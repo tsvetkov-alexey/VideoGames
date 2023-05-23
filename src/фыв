@@ -1,0 +1,27 @@
+{
+    "id": "0",
+    "imageUrl": "../assets/cream-1.png",
+    "likeUrl": "../assets/like.png",
+    "cartUrl": "../assets/cart.png",
+    "title": "ANGIOPHARM",
+    "fullTitle": "Крем-комфорт с комплексом омега 3-6-9 ANGIOPHARM",
+    "price": 1990
+},
+{
+    "id": "1",
+    "imageUrl": "../assets/cream-2.png",
+    "likeUrl": "../assets/like.png",
+    "cartUrl": "../assets/cart.png",
+    "title": "THE ACT",
+    "fullTitle": "Детокс скраб для тела с гималайской солью",
+    "price": 699
+},
+{
+    "id": "2",
+    "imageUrl": "../assets/cream-3.png",
+    "likeUrl": "../assets/like.png",
+    "cartUrl": "../assets/cart.png",
+    "title": "KEEP CALM",
+    "fullTitle": "Успокаивающий тоник с экстрактами центеллы и ламинарии Keep calm toner",
+    "price": 1990
+},

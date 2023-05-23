@@ -1,0 +1,214 @@
+[
+    {
+        "id": 0,
+        "imageUrl": "../assets/battlefield.jpg",
+        "title": "Battlefield 2042",
+        "minPrice": 1299,
+        "maxPrice": 3099,
+        "category": 0
+    },
+    {
+        "id": 1,
+        "imageUrl": "../assets/gta.jpg",
+        "title": "Grand Theft Auto V",
+        "minPrice": 699,
+        "maxPrice": 4299,
+        "category": 0
+    },
+    {
+        "id": 2,
+        "imageUrl": "../assets/forza.jpg",
+        "title": "Forza Horizon 5",
+        "minPrice": 2299,
+        "maxPrice": 2599,
+        "category": 0
+    },
+    {
+        "id": 3,
+        "imageUrl": "../assets/assassin.png",
+        "title": "Assassin’s Creed Valhala",
+        "minPrice": 3299,
+        "maxPrice": 5099,
+        "category": 0
+    },
+    {
+        "id": 4,
+        "imageUrl": "../assets/rainbow.jpg",
+        "title": "Tom Clancy’s Rainbox Six Siege",
+        "minPrice": 1299,
+        "maxPrice": 3099,
+        "category": 0
+    },
+    {
+        "id": 5,
+        "imageUrl": "../assets/LIS.jpg",
+        "title": "Life is strange",
+        "minPrice": 699,
+        "maxPrice": 1299,
+        "category": 0
+    },
+    {
+        "id": 6,
+        "imageUrl": "../assets/Dying-Light-2-Stay-Human-01.jpg",
+        "title": "Dying Light 2",
+        "minPrice": 1599,
+        "maxPrice": 2099,
+        "category": 0
+    },
+    {
+        "id": 7,
+        "imageUrl": "../assets/dbd-new-key-art-social-resizes-social-1920x1080.jpg",
+        "title": "Dead by daylight",
+        "minPrice": 899,
+        "maxPrice": 2349,
+        "category": 0
+    },
+    {
+        "id": 8,
+        "imageUrl": "../assets/fifa23.jpg",
+        "title": "FIFA 2023",
+        "minPrice": 3899,
+        "maxPrice": 5349,
+        "category": 0
+    },
+    {
+        "id": 9,
+        "imageUrl": "../assets/detroit.jpg",
+        "title": "Detroit Become Human",
+        "minPrice": 899,
+        "maxPrice": 3349,
+        "category": 1
+    },
+    {
+        "id": 10,
+        "imageUrl": "../assets/uncharted.jpg",
+        "title": "Uncharted. Legacy of 
+        thieves collection",
+        "minPrice": 3699,
+        "maxPrice": 4349,
+        "category": 1
+    },
+    {
+        "id": 11,
+        "imageUrl": "../assets/spiderman.jpg",
+        "title": "FIFA 2023",
+        "minPrice": 2299,
+        "maxPrice": 4349,
+        "category": 1
+    },
+    {
+        "id": 12,
+        "imageUrl": "../assets/BTS.jpg",
+        "title": "Beyond Two Souls",
+        "minPrice": 799,
+        "maxPrice": 1899,
+        "category": 1
+    },
+    {
+        "id": 13,
+        "imageUrl": "../assets/heavy-rain.jpg",
+        "title": "Heavy rain",
+        "minPrice": 499,
+        "maxPrice": 2549,
+        "category": 1
+    },
+    {
+        "id": 14,
+        "imageUrl": "../assets/fifa23.jpg",
+        "title": "FIFA 2023",
+        "minPrice": 3899,
+        "maxPrice": 5349,
+        "category": 0
+    },
+    {
+        "id": 15,
+        "imageUrl": "../assets/infamous.jpg",
+        "title": "Infamous: second son",
+        "minPrice": 699,
+        "maxPrice": 2549,
+        "category": 1
+    },
+    {
+        "id": 16,
+        "imageUrl": "../assets/fifa23.jpg",
+        "title": "The last of us: part 1",
+        "minPrice": 1699,
+        "maxPrice": 3349,
+        "category": 1
+    },
+    {
+        "id": 17,
+        "imageUrl": "../assets/Bloodborne.jpg",
+        "title": "Bloodborne",
+        "minPrice": 1299,
+        "maxPrice": 3249,
+        "category": 1
+    },
+    {
+        "id": 18,
+        "imageUrl": "../assets/halo.jpg",
+        "title": "Halo 5",
+        "minPrice": 1599,
+        "maxPrice": 3099,
+        "category": 2
+    },
+    {
+        "id": 19,
+        "imageUrl": "../assets/nba.jpg",
+        "title": "NBA 2k23",
+        "minPrice": 3099,
+        "maxPrice": 4249,
+        "category": 2
+    },
+    {
+        "id": 20,
+        "imageUrl": "../assets/mk11.jpg",
+        "title": "Mortal Kombat 11",
+        "minPrice": 2599,
+        "maxPrice": 3299,
+        "category": 2
+    },
+    {
+        "id": 21,
+        "imageUrl": "../assets/a_way_out.jpg",
+        "title": "A way out",
+        "minPrice": 1099,
+        "maxPrice": 3549,
+        "category": 2
+    },
+    {
+        "id": 22,
+        "imageUrl": "../assets/NFS.jpg",
+        "title": "Need for speed: Payback",
+        "minPrice": 699,
+        "maxPrice": 1549,
+        "category": 2
+    },
+    {
+        "id": 23,
+        "imageUrl": "../assets/Far_cry.jpg",
+        "title": "Far Cry Primal",
+        "minPrice": 699,
+        "maxPrice": 1299,
+        "category": 2
+    },
+    {
+        "id": 24,
+        "imageUrl": "../assets/RDR2.jpg",
+        "title": "Red Dead Redemption 2",
+        "minPrice": 2699,
+        "maxPrice": 4549,
+        "category": 2
+    },
+    {
+        "id": 25,
+        "imageUrl": "../assets/UFC4.jpg",
+        "title": "UFC 4",
+        "minPrice": 2299,
+        "maxPrice": 3749,
+        "category": 2
+    }
+    
+
+
+]

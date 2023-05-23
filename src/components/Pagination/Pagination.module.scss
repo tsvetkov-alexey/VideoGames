@@ -1,0 +1,43 @@
+.root {
+    li {
+        display: inline-flex;
+
+        a {
+            border: 1px solid silver;
+            width: 36px;
+            height: 36px;
+            border-radius: 10px;
+            color: #fff;
+            text-align: center;
+            line-height: 36px;
+            margin-right: 5px;
+            cursor: pointer;
+        }
+
+        a:hover {
+            background: #fff;
+            color: #000;
+        }
+    }
+
+    :global {
+        .selected {
+            a {
+                background-color: #fff;
+                color: #000;
+            }
+        }
+    }
+
+    li:first-child {
+        margin-left: 41.7%;
+    }
+}
+
+@media (max-width: 420px) {
+    .root {
+        li:first-child {
+            margin-left: 20%;
+        }
+    }
+}
