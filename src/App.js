@@ -26,10 +26,10 @@ function App() {
                 <div className="main-block">
                     <Navigation value={categoryId} onChangeCategory={(i) => setCategoryId(i)} />
                     <Routes>
-                        <Route path="/" element={<Home />} />
-                        <Route path="/games/:id" element={<MoreInfo />} />
-                        <Route path="/streamers" element={<Streamers />} />
-                        <Route path="/*" element={<NotFound />} />
+                        <Route path="" element={<Home />} />
+                        <Route path="games/:id" element={<MoreInfo />} />
+                        <Route path="streamers" element={<Streamers />} />
+                        <Route path="*" element={<NotFound />} />
                     </Routes>
                 </div>
             </SearchContext.Provider>
