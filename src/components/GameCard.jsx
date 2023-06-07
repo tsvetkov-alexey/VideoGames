@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const GameCard = ({ id, title, imageUrl, minPrice, maxPrice }) => {
     return (
         <div className="game">
-            <Link key={id} to={`/games/${id}`}>
+            <Link key={title} to={`/games/${id}`}>
                 <img src={imageUrl} alt="game" />
             </Link>
             <h4>{title}</h4>

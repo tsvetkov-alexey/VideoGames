@@ -42,11 +42,15 @@
             border: #f5f5f5;
             position: absolute;
             margin-left: 10px;
+            cursor: pointer;
             svg {
                 width: 21px;
                 height: 21px;
                 margin-top: 4px;
-                cursor: pointer;
+            }
+            img {
+                width: 23px;
+                margin-top: 4px;
             }
         }
     }

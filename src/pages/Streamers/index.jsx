@@ -7,7 +7,7 @@ const Streamers = () => {
                 <ul>
                     <li>Itpedia</li>
                     <li>Zubareff</li>
-                    <li>Buster</li>
+                    <li className="active">Buster</li>
                     <li>Хозяева</li>
                     <li>Gensyxa</li>
                 </ul>

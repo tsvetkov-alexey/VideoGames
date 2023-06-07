@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import Search from './Search';
 import { Link } from 'react-router-dom';
@@ -6,6 +6,8 @@ import { Link } from 'react-router-dom';
 const platforms = ['PC', 'PlayStation', 'Xbox'];
 
 const Navigation = ({ value, onChangeCategory }) => {
+    const [activeCategory, setActiveCategory] = useState(null);
+
     return (
         <div>
             <nav>
@@ -23,11 +25,17 @@ const Navigation = ({ value, onChangeCategory }) => {
                 </ul>
                 <Search />
                 <ul>
-                    <Link to="/NotFound">
+                    <Link
+                        to="/merch"
+                        onClick={() => onChangeCategory(3)}
+                        className={value === 3 ? 'active' : ''}>
                         <li className="merch-header">Мерч</li>
                     </Link>
 
-                    <Link to="/NotFound">
+                    <Link
+                        to="/streamers"
+                        onClick={() => onChangeCategory(4)}
+                        className={value === 4 ? 'active' : ''}>
                         <li className="streamers-header">Стримеры</li>
                     </Link>
                 </ul>

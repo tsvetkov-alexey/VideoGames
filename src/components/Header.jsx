@@ -1,15 +1,16 @@
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
-import { SearchContext } from '../App';
+import { setCategoryId } from '../redux/slices/filterSlice';
+import { useDispatch } from 'react-redux';
 
 const Header = () => {
-    const { setCategoryId } = useContext(SearchContext);
+    const dispatch = useDispatch();
     return (
         <div>
             <header>
                 <div className="header-content">
                     <Link to="/">
-                        <div className="logo" onClick={() => setCategoryId(10)}>
+                        <div className="logo" onClick={() => dispatch(setCategoryId(10))}>
                             <div className="logo-img">
                                 <img src="assets/logo.png" alt="logo" />
                             </div>

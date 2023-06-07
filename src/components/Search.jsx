@@ -1,13 +1,35 @@
-import React, { useContext } from 'react';
-import { SearchContext } from '../App';
+import React from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { setSearchValue } from '../redux/slices/filterSlice';
+import { useRef } from 'react';
+import debounce from 'lodash.debounce';
+import { useCallback } from 'react';
+import { useState } from 'react';
 
 const Search = () => {
-    const { searchValue, setSearchValue } = useContext(SearchContext);
+    const searchValue = useSelector((state) => state.filter.searchValue);
+    const dispatch = useDispatch();
+    const inputRef = useRef();
+
+    const [value, setValue] = useState('');
+    const updateSearchValue = useCallback(
+        debounce((str) => {
+            dispatch(setSearchValue(str));
+        }, 250),
+        [],
+    );
+
+    const onChangeInput = (e) => {
+        setValue(e.target.value);
+        updateSearchValue(e.target.value);
+    };
+
     return (
         <div className="search">
             <input
-                value={searchValue}
-                onChange={(e) => setSearchValue(e.target.value)}
+                ref={inputRef}
+                value={value}
+                onChange={onChangeInput}
                 type="text"
                 placeholder="Поиск..."
             />

@@ -366,7 +366,10 @@ footer {
 
             .game {
                 margin: 0 !important;
-                width: 100%;
+
+                img {
+                    max-width: 100%;
+                }
             }
         }
     }
@@ -374,5 +377,15 @@ footer {
     footer {
         padding-top: 20px;
         padding-bottom: 30px;
+    }
+}
+
+#work-in-progress {
+    margin-top: 200px;
+    text-align: center;
+    color: #fff;
+    img {
+        max-width: 100px;
+        padding-top: 20px;
     }
 }

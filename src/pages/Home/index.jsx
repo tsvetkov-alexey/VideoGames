@@ -1,21 +1,28 @@
 import React, { useContext, useEffect, useState } from 'react';
 
-import Navigation from '../../components/Navigation';
 import TitlePhrase from '../../components/TitlePhrase';
 import GameCard from '../../components/GameCard';
 import Skeleton from '../../components/Skeleton';
-import { SearchContext } from '../../App';
 
 import styles from './home.module.scss';
 import Pagination from '../../components/Pagination';
-import MerchCard from '../../components/MerchCard';
+
+import { useSelector, useDispatch } from 'react-redux';
+import { setPage } from '../../redux/slices/filterSlice';
+
+import axios from 'axios';
 
 const Home = () => {
-    const { categoryId, setCategoryId } = useContext(SearchContext);
-    const { searchValue } = useContext(SearchContext);
+    const dispatch = useDispatch();
+    const categoryId = useSelector((state) => state.filter.categoryId);
+    const searchValue = useSelector((state) => state.filter.searchValue);
+    const page = useSelector((state) => state.filter.page);
+
+    const onChangePage = (page) => {
+        dispatch(setPage(page));
+    };
 
     const [items, setItems] = useState([]);
-    const [page, setPage] = useState(1);
     const [isLoading, setIsLoading] = useState(true);
 
     const searchRequest = searchValue ? `&search=${searchValue}` : '';
@@ -23,12 +30,12 @@ const Home = () => {
 
     useEffect(() => {
         setIsLoading(true);
-        fetch(
-            `https://643274f83e05ff8b3726929d.mockapi.io/Games?page=${page}&limit=6&search=${searchValue}&${category}`,
-        )
-            .then((res) => res.json())
-            .then((arr) => {
-                setItems(arr);
+        axios
+            .get(
+                `https://643274f83e05ff8b3726929d.mockapi.io/Games?page=${page}&limit=6&search=${searchValue}&${category}`,
+            )
+            .then((res) => {
+                setItems(res.data);
                 setIsLoading(false);
             });
         window.scrollTo(0, 0);
@@ -65,7 +72,7 @@ const Home = () => {
         <div className="main-block">
             <TitlePhrase games={games} />
             <div className="games">{isLoading ? skeleton : gamesArray}</div>
-            <Pagination onChangePage={(pageNumber) => setPage(pageNumber)} />
+            <Pagination onChangePage={onChangePage} />
         </div>
     );
 };
