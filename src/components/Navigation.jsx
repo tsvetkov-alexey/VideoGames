@@ -13,14 +13,32 @@ const Navigation = ({ value, onChangeCategory }) => {
             <nav>
                 <ul>
                     <div className="platforms">
-                        {platforms.map((platformName, i) => (
+                        {/* {platforms.map((platformName, i) => (
                             <li
                                 key={i}
                                 onClick={() => onChangeCategory(i)}
                                 className={value === i ? 'active' : ''}>
                                 {platformName}
                             </li>
-                        ))}
+                        ))} */}
+                        <Link
+                            to="/PC"
+                            onClick={() => onChangeCategory(0)}
+                            className={value === 0 ? 'active' : ''}>
+                            <li className="merch-header">PC</li>
+                        </Link>
+                        <Link
+                            to="/Playstation"
+                            onClick={() => onChangeCategory(1)}
+                            className={value === 1 ? 'active' : ''}>
+                            <li className="merch-header">PlayStation</li>
+                        </Link>
+                        <Link
+                            to="/Xbox"
+                            onClick={() => onChangeCategory(2)}
+                            className={value === 2 ? 'active' : ''}>
+                            <li className="merch-header">Xbox</li>
+                        </Link>
                     </div>
                 </ul>
                 <Search />

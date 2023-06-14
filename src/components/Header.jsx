@@ -12,7 +12,7 @@ const Header = () => {
                     <Link to="/">
                         <div className="logo" onClick={() => dispatch(setCategoryId(10))}>
                             <div className="logo-img">
-                                <img src="assets/logo.png" alt="logo" />
+                                <img src="../assets/logo.png" alt="logo" />
                             </div>
                             <div className="logo-txt">
                                 <p>REACT GAMES</p>
@@ -21,7 +21,7 @@ const Header = () => {
                         </div>
                     </Link>
                     <div className="profile">
-                        <img src="assets/like.png" alt="liked" className="profile-liked" />
+                        <img src="../assets/like.png" alt="liked" className="profile-liked" />
                         <svg
                             width="32"
                             height="32"

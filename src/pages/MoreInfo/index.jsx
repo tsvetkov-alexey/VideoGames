@@ -1,6 +1,6 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 
 import axios from 'axios';
 import st from './moreInfo.module.scss';
@@ -9,6 +9,8 @@ const MoreInfo = () => {
     const [game, setGame] = useState();
     const [isLiked, setIsLiked] = useState(false);
     const { id } = useParams();
+
+    const navigate = useNavigate();
 
     const likeToggle = () => {
         setIsLiked(!isLiked);
@@ -22,7 +24,9 @@ const MoreInfo = () => {
                 );
                 setGame(data);
             } catch (error) {
-                console.log('ОШИБКА ПРИ ПОЛУЧЕНИИ ИГР', error);
+                alert('Игры по такому адресу не сущетсвует');
+                console.log('ОШИБКА', error);
+                navigate('/');
             }
         }
 

@@ -1,5 +1,7 @@
-import React, { useContext, useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
+
+console.log('asdasdsad');
 
 const TitlePhrase = () => {
     const [phrase, setPhrase] = useState('Play has no limits');

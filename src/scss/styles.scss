@@ -238,7 +238,8 @@ header {
         margin: 50px 10%;
 
         .all-streamers {
-            width: 300px;
+            max-width: 100%;
+
             height: 70vh;
             border: 2px solid #fff;
             ul {
@@ -253,6 +254,8 @@ header {
                     line-height: 39px;
                     text-align: center;
                     padding: 4px;
+                    padding-left: 80px;
+                    padding-right: 80px;
                     cursor: pointer;
                     transition: all 300ms ease;
 
@@ -260,7 +263,12 @@ header {
                         margin-top: 50%;
                     }
 
-                    &:hover {
+                    // &:hover {
+                    //     background: #fff;
+                    //     color: #000;
+                    // }
+
+                    &.active {
                         background: #fff;
                         color: #000;
                     }
@@ -388,4 +396,14 @@ footer {
         max-width: 100px;
         padding-top: 20px;
     }
+}
+
+.streamer_cards {
+    margin-left: 8%;
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 20px;
+    grid-row-gap: 30px;
 }
