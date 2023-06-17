@@ -1,7 +1,15 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const GameCard = ({ id, title, imageUrl, minPrice, maxPrice }) => {
+export type GameCardProps = {
+    id: string;
+    title: string;
+    imageUrl: string;
+    minPrice: number;
+    maxPrice: number;
+};
+
+const GameCard: React.FC<GameCardProps> = ({ id, title, imageUrl, minPrice, maxPrice }) => {
     return (
         <div className="game">
             <Link key={title} to={`/games/${id}`}>

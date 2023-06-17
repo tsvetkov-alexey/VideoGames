@@ -1,10 +1,10 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import { setCategoryId } from '../redux/slices/filterSlice';
-import { useDispatch } from 'react-redux';
+import { useAppDispatch } from '../redux/store';
 
-const Header = () => {
-    const dispatch = useDispatch();
+const Header: React.FC = React.memo(() => {
+    const dispatch = useAppDispatch();
     return (
         <div>
             <header>
@@ -55,6 +55,6 @@ const Header = () => {
             </header>
         </div>
     );
-};
+});
 
 export default Header;

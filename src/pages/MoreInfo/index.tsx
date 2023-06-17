@@ -5,8 +5,20 @@ import { useNavigate, useParams } from 'react-router-dom';
 import axios from 'axios';
 import st from './moreInfo.module.scss';
 
-const MoreInfo = () => {
-    const [game, setGame] = useState();
+type MoreInfoStateProps = {
+    imageUrl: string;
+    title: string;
+    desc: string;
+    avgPrice: number;
+    maxPrice: number;
+    minPrice: number;
+    shop1: string;
+    shop2: string;
+    shop3: string;
+};
+
+const MoreInfo: React.FC = () => {
+    const [game, setGame] = useState<MoreInfoStateProps>();
     const [isLiked, setIsLiked] = useState(false);
     const { id } = useParams();
 
@@ -35,8 +47,8 @@ const MoreInfo = () => {
 
     if (!game) {
         return (
-            <div class={st.loaderContainer}>
-                <div class={st.loader}></div>
+            <div className={st.loaderContainer}>
+                <div className={st.loader}></div>
             </div>
         );
     }
@@ -48,7 +60,7 @@ const MoreInfo = () => {
                     {game.title}{' '}
                     <button className={st.like} onClick={likeToggle}>
                         {isLiked ? (
-                            <img src="../assets/liked.png" />
+                            <img src="../assets/liked.png" alt="like" />
                         ) : (
                             <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
                                 <defs>
@@ -69,21 +81,21 @@ const MoreInfo = () => {
 
             <div className={st.infoBlock}>
                 <div className="image">
-                    <img src={game.imageUrl} />
+                    <img src={game.imageUrl} alt="image" />
                 </div>
                 <div className={st.shops}>
                     <div className={st.shopA}>
-                        <img src={game.shop1} />
+                        <img src={game.shop1} alt="shop" />
                         <div className={st.dashed}></div>
                         <button>{game.minPrice} руб.</button>
                     </div>
                     <div className={st.shopB}>
-                        <img src={game.shop2} />
+                        <img src={game.shop2} alt="shop" />
                         <div className={st.dashed}></div>
                         <button>{game.avgPrice} руб.</button>
                     </div>
                     <div className={st.shopC}>
-                        <img src={game.shop3} />
+                        <img src={game.shop3} alt="shop" />
                         <div className={st.dashed}></div>
                         <button>{game.maxPrice} руб.</button>
                     </div>

@@ -1,7 +1,7 @@
 import React from 'react';
 import ContentLoader from 'react-content-loader';
 
-const MerchSkeleton = () => (
+const StreamerSkeleton: React.FC = () => (
     <ContentLoader
         speed={2}
         width={270}
@@ -15,4 +15,4 @@ const MerchSkeleton = () => (
     </ContentLoader>
 );
 
-export default MerchSkeleton;
+export default StreamerSkeleton;

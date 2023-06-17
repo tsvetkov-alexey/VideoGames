@@ -1,6 +1,6 @@
 import React from 'react';
 
-const NotWorking = () => {
+const NotWorking: React.FC = () => {
     return (
         <div id="work-in-progress">
             <h1>Похоже идут работы</h1>

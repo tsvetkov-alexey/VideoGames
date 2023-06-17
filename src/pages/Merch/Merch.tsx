@@ -3,10 +3,10 @@ import st from './merch.module.scss';
 import { useEffect } from 'react';
 import axios from 'axios';
 import { useState } from 'react';
-import MerchItems from '../../components/MerchCard/MerchItems';
+import MerchItems, { MerchItemsProps } from '../../components/MerchCard/MerchItems';
 import MerchSkeleton from '../../components/Skeletons/MerchSkeleton';
 
-const Merch = () => {
+const Merch: React.FC = () => {
     const [merchItems, setMerchItems] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
     useEffect(() => {
@@ -21,7 +21,7 @@ const Merch = () => {
     }, []);
 
     const merchSkeleton = [...new Array(8)].map((_, i) => <MerchSkeleton key={i} />);
-    const merch = merchItems.map((obj) => <MerchItems key={obj.id} {...obj} />);
+    const merch = merchItems.map((obj: MerchItemsProps) => <MerchItems key={obj.id} {...obj} />);
 
     return (
         <div>

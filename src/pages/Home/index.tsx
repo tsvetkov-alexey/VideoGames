@@ -1,24 +1,24 @@
-import React, { useContext, useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 
 import TitlePhrase from '../../components/TitlePhrase';
-import GameCard from '../../components/GameCard';
+import GameCard, { GameCardProps } from '../../components/GameCard';
 import Skeleton from '../../components/Skeletons/Skeleton';
 
 import styles from './home.module.scss';
 import Pagination from '../../components/Pagination';
 
-import { useSelector, useDispatch } from 'react-redux';
+import { useSelector } from 'react-redux';
 import { setPage } from '../../redux/slices/filterSlice';
 import { fetchGames } from '../../redux/slices/gamesSlice';
 
-import axios from 'axios';
+import { RootState, useAppDispatch } from '../../redux/store';
 
-const Home = () => {
-    const dispatch = useDispatch();
-    const { categoryId, searchValue, page } = useSelector((state) => state.filter);
-    const { items, status } = useSelector((state) => state.games);
+const Home: React.FC = () => {
+    const dispatch = useAppDispatch();
+    const { categoryId, searchValue, page } = useSelector((state: RootState) => state.filter);
+    const { items, status } = useSelector((state: RootState) => state.games);
 
-    const onChangePage = (page) => {
+    const onChangePage = (page: number) => {
         dispatch(setPage(page));
     };
 
@@ -33,7 +33,7 @@ const Home = () => {
         window.scrollTo(0, 0);
     }, [searchRequest, categoryId, page]);
 
-    const games = items.map((obj) => <GameCard key={obj.id} {...obj} />);
+    const games = items.map((obj: GameCardProps) => <GameCard key={obj.id} {...obj} />);
     const gamesArray =
         games.length > 0 ? (
             games
@@ -51,7 +51,7 @@ const Home = () => {
 
     return (
         <div className="main-block">
-            <TitlePhrase games={games} />
+            <TitlePhrase />
             <div className="games">{status === 'loading' ? skeleton : gamesArray}</div>
             <Pagination onChangePage={onChangePage} />
         </div>

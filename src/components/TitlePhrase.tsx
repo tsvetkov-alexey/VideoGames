@@ -1,11 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
+import { RootState } from '../redux/store';
 
-console.log('asdasdsad');
-
-const TitlePhrase = () => {
+const TitlePhrase: React.FC = () => {
     const [phrase, setPhrase] = useState('Play has no limits');
-    const searchValue = useSelector((state) => state.filter.searchValue);
+    const searchValue = useSelector((state: RootState) => state.filter.searchValue);
 
     useEffect(() => {
         setPhrase(searchValue ? `Поиск по запросу: ${searchValue}` : 'Play has no limits');

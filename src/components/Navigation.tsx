@@ -3,11 +3,12 @@ import React, { useState } from 'react';
 import Search from './Search';
 import { Link } from 'react-router-dom';
 
-const platforms = ['PC', 'PlayStation', 'Xbox'];
+type NavigationProps = {
+    value: number;
+    onChangeCategory: (i: number) => void;
+};
 
-const Navigation = ({ value, onChangeCategory }) => {
-    const [activeCategory, setActiveCategory] = useState(null);
-
+const Navigation: React.FC<NavigationProps> = React.memo(({ value, onChangeCategory }) => {
     return (
         <div>
             <nav>
@@ -60,6 +61,6 @@ const Navigation = ({ value, onChangeCategory }) => {
             </nav>
         </div>
     );
-};
+});
 
 export default Navigation;

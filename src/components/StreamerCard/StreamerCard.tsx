@@ -1,8 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import st from './StreamerCard.module.scss';
-import axios from 'axios';
 
-const StreamerCard = ({ imageUrl, title, price }) => {
+export type StreamerCardProps = {
+    imageUrl: string;
+    title: string;
+    price: number;
+};
+
+const StreamerCard: React.FC<StreamerCardProps> = ({ imageUrl, title, price }) => {
     return (
         <div className={st.card}>
             <img src={imageUrl} alt="photo" />

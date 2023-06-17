@@ -1,20 +1,21 @@
 import React, { useEffect, useState } from 'react';
-
 import TitlePhrase from '../components/TitlePhrase';
-import GameCard from '../components/GameCard';
+import GameCard, { GameCardProps } from '../components/GameCard';
 import Skeleton from '../components/Skeletons/Skeleton';
 
 import { useSelector } from 'react-redux';
 
 import axios from 'axios';
+import { filterSelector } from '../redux/slices/filterSlice';
 
-const PlayStation = () => {
-    const { searchValue, categoryId } = useSelector((state) => state.filter);
+const Xbox: React.FC = () => {
+    const { searchValue, categoryId } = useSelector(filterSelector);
+
     const [items, setItems] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
 
     const searchRequest = searchValue ? `&search=${searchValue}` : '';
-    const category = '&category=1';
+    const category = '&category=2';
 
     useEffect(() => {
         setIsLoading(true);
@@ -29,7 +30,7 @@ const PlayStation = () => {
         window.scrollTo(0, 0);
     }, [searchRequest, categoryId]);
 
-    const games = items.map((obj) => <GameCard key={obj.id} {...obj} />);
+    const games = items.map((obj: GameCardProps) => <GameCard key={obj.id} {...obj} />);
     const gamesArray =
         games.length > 0 ? (
             games
@@ -47,10 +48,10 @@ const PlayStation = () => {
 
     return (
         <div className="main-block">
-            <TitlePhrase games={games} />
+            <TitlePhrase />
             <div className="games">{isLoading ? skeleton : gamesArray}</div>
         </div>
     );
 };
 
-export default PlayStation;
+export default Xbox;
