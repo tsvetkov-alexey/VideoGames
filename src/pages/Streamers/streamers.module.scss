@@ -7,3 +7,16 @@
     grid-column-gap: 20px;
     grid-row-gap: 30px;
 }
+@media (max-width: 420px) {
+    .streamer_cards {
+        display: flex;
+        flex-direction: column;
+        margin-top: 40px;
+        width: 100%;
+
+        svg {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+}

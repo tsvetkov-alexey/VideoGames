@@ -407,3 +407,13 @@ footer {
     grid-column-gap: 20px;
     grid-row-gap: 30px;
 }
+
+@media (max-width: 420px) {
+    .streamers {
+        flex-direction: column;
+
+        svg {
+            margin: 0 auto;
+        }
+    }
+}
