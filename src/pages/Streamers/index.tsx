@@ -53,7 +53,7 @@ const Streamers: React.FC<StreamersProps> = (props) => {
                 </ul>
             </div>
             {isLoading ? (
-                <div className="streamer_cards">{skeleton}</div>
+                <div className={st.streamer_cards}>{skeleton}</div>
             ) : (
                 <div className={st.streamer_cards}>{streamer}</div>
             )}

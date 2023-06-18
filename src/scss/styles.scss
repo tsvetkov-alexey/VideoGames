@@ -411,9 +411,11 @@ footer {
 @media (max-width: 420px) {
     .streamers {
         flex-direction: column;
-
-        svg {
-            margin: 0 auto;
+        .streamers_cards {
+            svg {
+                display: flex;
+                flex-direction: column;
+            }
         }
     }
 }
